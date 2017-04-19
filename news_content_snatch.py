@@ -46,7 +46,9 @@ def scrape_page(link, silent=True):
     soup = bs.BeautifulSoup(sauce, 'lxml')
     page_body = soup.body
 
-    for article_link in page_body.find_all('a', class_=['gs-c-promo-heading', 'title-link']):
+    for article_link in page_body.find_all('a', class_=['gs-c-promo-heading',
+                                                        'title-link',
+                                                        'faux-block-link__overlay-link']):
         if article_link.get('href').split('/')[1] == 'newyddion':
             continue
         try:
