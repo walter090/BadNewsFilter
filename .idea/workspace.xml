@@ -19,8 +19,8 @@
       <file leaf-file-name="news_content_snatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/news_content_snatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+            <state relative-caret-position="230">
+              <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/news_filter.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="0" />
+              <selected id="1" />
             </state>
           </provider>
         </entry>
@@ -55,8 +55,8 @@
       <list>
         <option value="$PROJECT_DIR$/news_filter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/news_content_snatch.py" />
         <option value="$PROJECT_DIR$/news_filter.ipynb" />
+        <option value="$PROJECT_DIR$/news_content_snatch.py" />
       </list>
     </option>
   </component>
@@ -96,20 +96,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bad_news_filter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bad_news_filter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -119,7 +105,7 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/news/world-asia-39623882&#10;true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/news/world-asia-39623882&#10;true&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/blogs-trending-39577932" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -276,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492546695303</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="snatch function improved, now with the option to scrape the whole news site">
+      <created>1492555056297</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492555056297</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -310,7 +303,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore file added&#10;news_content_snatch added, a function to scrap a news article from bbc news" />
     <MESSAGE value="method added to scrape links to news topics in nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="method added to scrape links to news topics in nav" />
+    <MESSAGE value="snatch function improved, now with the option to scrape the whole news site" />
+    <option name="LAST_COMMIT_MESSAGE" value="snatch function improved, now with the option to scrape the whole news site" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -441,6 +435,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/news/blogs-trending-39577932">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/39516648">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/39628590">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/39586937">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/39577320">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/news_filter.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -450,8 +484,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/news_content_snatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="72" column="38" lean-forward="true" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+        <state relative-caret-position="230">
+          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>

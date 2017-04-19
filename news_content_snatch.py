@@ -47,6 +47,8 @@ def scrape_page(link, silent=True):
     page_body = soup.body
 
     for article_link in page_body.find_all('a', class_=['gs-c-promo-heading', 'title-link']):
+        if article_link.get('href').split('/')[1] == 'newyddion':
+            continue
         try:
             get_full_content(article_link.get('href'), silent)
         except request.URLError:
