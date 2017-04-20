@@ -23,7 +23,7 @@ def get_full_content(link, silent=True):
     except AttributeError:
         return
     for paragraph in ps:
-        paragraphs.append(paragraph.get_text())
+        paragraphs.append(paragraph.get_text() + ' ')
     news_path = content_local + link.split('/')[2]
 
     if not os.path.isfile(news_path):
