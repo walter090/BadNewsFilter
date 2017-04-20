@@ -80,6 +80,7 @@ def scrape(link='/news', mode='specified', silent=True):
     elif mode == 'full':
         topic_dict = get_nav_links()
         for topic, sub_topics in topic_dict.iteritems():
+
             scrape_page(topic, silent)
             if not sub_topics == []:
                 for sub in sub_topics:
