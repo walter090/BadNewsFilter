@@ -14,7 +14,7 @@ def get_full_content(link, silent=True, use_full_link=False):
         sauce = request.urlopen(full_link).read()
     except request.URLError:
         if not silent:
-            print '404 encountered at {}'.format(link)
+            print 'Error encountered at {}'.format(link)
         return
     soup = bs.BeautifulSoup(sauce, 'lxml')
     news_body = soup.body
@@ -103,7 +103,6 @@ def get_nav_links():
 
     for topic in nav.find_all('a'):
         topic_link = topic.get('href')
-        print topic_link
 
         if topic_link == '/news/video_and_audio/headlines':
             continue
