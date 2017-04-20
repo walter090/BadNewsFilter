@@ -5,13 +5,16 @@ import os
 URL_HEAD = 'http://www.bbc.com'
 
 
-def get_full_content(link, silent=True):
+def get_full_content(link, silent=True, use_full_link=False):
     content_local = 'news/'
+    full_link = URL_HEAD + link
+    if use_full_link:
+        full_link = link
     try:
-        sauce = request.urlopen(URL_HEAD + link).read()
+        sauce = request.urlopen(full_link).read()
     except request.URLError:
         if not silent:
-            print '404 encountered'
+            print '404 encountered at {}'.format(link)
         return
     soup = bs.BeautifulSoup(sauce, 'lxml')
     news_body = soup.body
@@ -24,36 +27,41 @@ def get_full_content(link, silent=True):
         return
     for paragraph in ps:
         paragraphs.append(paragraph.get_text() + ' ')
-    news_path = content_local + link.split('/')[2]
+    news_title = link.split('/')[2]
+    news_path = content_local + news_title
 
     if not os.path.isfile(news_path):
         with open(news_path, 'w') as writer:
             for p in paragraphs:
                 writer.write(p.encode('utf8'))
         if not silent:
-            print 'news entry added'
+            print 'news entry {} added'.format(news_title)
     else:
         if not silent:
-            print 'news already in file'
+            print 'news {} already in file'.format(news_title)
 
 
-def scrape_page(link, silent=True):
+def scrape_page(link, silent=True, use_full_link=False):
+    full_link = URL_HEAD + link
+    if use_full_link:
+        full_link = link
     try:
-        sauce = request.urlopen(URL_HEAD + link).read()
+        sauce = request.urlopen(full_link).read()
     except request.URLError:
         print '404'
         return
     soup = bs.BeautifulSoup(sauce, 'lxml')
     page_body = soup.body
 
-    for article_link in page_body.find_all('a', class_=['gs-c-promo-heading',
-                                                        'title-link',
-                                                        'faux-block-link__overlay-link']):
+    for article_link in page_body.find_all('a', {'class': ['gs-c-promo-heading',
+                                                           'title-link',
+                                                           'faux-block-link__overlay-link']}):
         if article_link.get('href').split('/')[1] == 'newyddion':
             continue
         try:
             get_full_content(article_link.get('href'), silent)
         except request.URLError:
+            print 'Error encountered at {}'.format(link)
             continue
 
 
@@ -82,7 +90,7 @@ def scrape(link='/news', mode='specified', silent=True):
 
 def get_nav_links():
     """
-    find all topics and sub-topics on the bbc new site
+    find all topics and sub-topics on the bbc news site
     :return: a dict of all topics, the dict follows a structure like 
     {_link_to_topic_: _link_to_sub_topics_}
     """
@@ -93,13 +101,12 @@ def get_nav_links():
 
     nav_links = {}
 
-    for topic in nav.find_all('li'):
-        topic_link = topic.find('a').get('href')
+    for topic in nav.find_all('a'):
+        topic_link = topic.get('href')
+        print topic_link
 
         if topic_link == '/news/video_and_audio/headlines':
             continue
-        if topic_link == '/news/magazine':
-            break
 
         sauce = request.urlopen(URL_HEAD + topic_link).read()
         soup = bs.BeautifulSoup(sauce, 'lxml')
@@ -124,3 +131,18 @@ def get_nav_links():
 
         nav_links[topic_link] = sub_links
     return nav_links
+
+
+if __name__ == '__main__':
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--mode', dest='mode', default='specified', type=str)
+    parser.add_argument('--link', dest='link', default='/news', type=str)
+    verbose_parser = parser.add_mutually_exclusive_group()
+    verbose_parser.add_argument('--verbose', dest='silent', action='store_false')
+    verbose_parser.add_argument('--silent', dest='silent', action='store_true')
+    parser.set_defaults(silent=True)
+
+    args = parser.parse_args()
+    scrape(link=args.link, mode=args.mode, silent=args.silent)
