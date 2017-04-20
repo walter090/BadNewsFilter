@@ -9,7 +9,7 @@ def get_full_content(link, silent=True):
     content_local = 'news/'
     try:
         sauce = request.urlopen(URL_HEAD + link).read()
-    except request.HTTPError:
+    except request.URLError:
         if not silent:
             print '404 encountered'
         return
@@ -40,7 +40,7 @@ def get_full_content(link, silent=True):
 def scrape_page(link, silent=True):
     try:
         sauce = request.urlopen(URL_HEAD + link).read()
-    except request.HTTPError:
+    except request.URLError:
         print '404'
         return
     soup = bs.BeautifulSoup(sauce, 'lxml')

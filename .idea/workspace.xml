@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bc54db75-b154-45ad-bafe-d0c03a4f2595" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news_content_snatch.py" afterPath="$PROJECT_DIR$/news_content_snatch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/news_filter.ipynb" afterPath="$PROJECT_DIR$/news_filter.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +16,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="news_content_snatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="news_content_snatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/news_content_snatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+            <state relative-caret-position="253">
+              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news_filter.ipynb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news_filter.ipynb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news_filter.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="1" />
+              <selected id="0" />
             </state>
           </provider>
         </entry>
@@ -54,8 +55,8 @@
       <list>
         <option value="$PROJECT_DIR$/news_filter.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/news_content_snatch.py" />
         <option value="$PROJECT_DIR$/news_filter.ipynb" />
+        <option value="$PROJECT_DIR$/news_content_snatch.py" />
       </list>
     </option>
   </component>
@@ -95,6 +96,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bad_news_filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bad_news_filter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -104,7 +119,7 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/news/world-us-canada-39636104&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/world-asia-39623882&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/world-us-canada-39633669&#10;true&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/blogs-trending-39577932" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/news/world-us-canada-39636104&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/world-asia-39623882&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/world-us-canada-39633669&#10;true&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/blogs-trending-39577932&#10;/home/snowman/Documents/ud/ml-git/bad_news_filter/news/business-38594037" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -282,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492572175370</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="notebook&#10;read news from text file in to list of strings">
+      <created>1492659959308</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1492659959308</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -319,7 +341,8 @@
     <MESSAGE value="snatch function improved, now with the option to scrape the whole news site" />
     <MESSAGE value="filter out news stories in welsh" />
     <MESSAGE value="improved coverage" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved coverage" />
+    <MESSAGE value="notebook&#10;read news from text file in to list of strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="notebook&#10;read news from text file in to list of strings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -554,20 +577,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news_content_snatch.py">
+    <entry file="file://$PROJECT_DIR$/news/business-38570387">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/business-38403426">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/business-38594037">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/news_filter.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="1" />
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news_content_snatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
